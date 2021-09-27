@@ -1,7 +1,11 @@
 package cn.ywrby;
 
+import cn.ywrby.domain.Book;
+import cn.ywrby.domain.Classify;
 import cn.ywrby.domain.User;
 import cn.ywrby.domain.UserClass;
+import cn.ywrby.mapper.BookMapper;
+import cn.ywrby.mapper.ClassifyMapper;
 import cn.ywrby.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +17,14 @@ import java.util.List;
 class BookStoreDemo2ApplicationTests {
 
     @Autowired
-    private UserMapper userMapper;
+    private ClassifyMapper classifyMapper;
+
+    @Autowired
+    private BookMapper bookMapper;
 
     @Test
     void contextLoads() {
-        UserClass uc = userMapper.findClassByUsername("222019321102062");
-        System.out.println(uc);
+        //List<Book> bookListByClassifyId = bookMappergetBookListByClassifyId(1);
     }
 
 }

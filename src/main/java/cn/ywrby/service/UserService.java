@@ -4,6 +4,8 @@ package cn.ywrby.service;
 import cn.ywrby.domain.User;
 import cn.ywrby.domain.UserClass;
 
+import java.util.List;
+
 public interface UserService {
 
     /**
@@ -31,4 +33,6 @@ public interface UserService {
      * @return
      */
     public boolean updateUserInfo(String username, String name, String oldPassword, String newPassword);
+
+    public boolean setUserBookList(String username, List<String> bookIdList);
 }

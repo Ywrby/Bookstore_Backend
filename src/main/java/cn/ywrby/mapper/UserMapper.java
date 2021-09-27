@@ -35,4 +35,6 @@ public interface UserMapper {
      * 更新用户基本信息
      */
     public void updateUserInfo(String username, String name,String password);
+
+    public void insertUserBookList(@Param("userId") int userId,@Param("bookId") String bookId);
 }

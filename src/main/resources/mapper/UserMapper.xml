@@ -28,4 +28,8 @@
     <update id="updateUserInfo">
         update user_info set name=#{name},pwd=#{password} where schNum=#{username}
     </update>
+
+    <insert id="insertUserBookList">
+        insert into user_book values (#{userId}, #{bookId})
+    </insert>
 </mapper>
